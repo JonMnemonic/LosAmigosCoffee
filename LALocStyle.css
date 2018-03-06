@@ -1,0 +1,18 @@
+body
+{
+background: url(https://tinyurl.com/yctnn52p); 
+background-size: cover;  
+no-repeat;
+}
+.icon-bar{
+margin: 0;
+}
+#map
+{
+height: 400px;
+width: 100%;
+position: center;
+}
+{
+font-family: Impact, Charcoal, sans-serif;
+}
