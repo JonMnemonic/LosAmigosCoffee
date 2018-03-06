@@ -1,16 +1,16 @@
 
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    	<link rel="stylesheet" href="file:///C:\WebEx\styles\LAStyle.css">
-    	<link rel="stylesheet" href="file:///C:\WebEx\styles\LABeanLocStyle.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="LAStyle.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<style>
 
       #map {
-        height: 400px;
-        width: 60%;
+        height: 75%;
+        width: 100%;
         position: center;
         border-style:solid;
 
@@ -38,16 +38,28 @@
 			</style>
 
 			<body>
-				<h1 style="color:#33cfff"; align="center";>The Los Amigos Locations</h1>
-        <div class="icon-bar">
-          <a class="active" 
-      href="LAHome.htm"><i class="fa fa-home"></i></a>
-          <a href="http://wps.aw.com/wps/media/objects/2234/2287950/sourcefiles/Chapter19/Bean.html"><i class="fa fa-search"></i></a> 
-          <a href="LAShop.htm"><i class="fa fa-coffee"></i></a>
-          <a href="LALocations.htm"><i class="fa fa-globe"></i></a>
-          <a href="LAAbout.htm"><i class="fa fa-question-circle"></i></a> 
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Los Amigos Home</a>
         </div>
-	    	<div id="map"></div>
+      <ul class="nav navbar-nav">
+          <li class="active"><a href="LAHome.htm">Home</a></li>
+          <li><a href="LAShop.htm">Shop</a></li>
+          <li><a href="LALocations.htm">Locations</a></li>
+          <li><a href="LAAbout.htm">About Us</a></li>
+        </ul></li></ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+        </div>
+    </nav>
+  
+    <div class="container">
+
+
+      <div id="map"></div>
     		<script>
       		function initMap() {
         	var mark1 = {lat: 30.420165, lng: -97.838201};
@@ -74,7 +86,7 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRH5X8CZ-kRQ8X9BOfs0dsxTSBCaeEf2M&callback=initMap">
     </script>
-			
+			</div>
 		</body>
 	</head>
 </html>
