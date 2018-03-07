@@ -1,0 +1,92 @@
+
+<html>
+	<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="LAStyle.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style>
+
+      #map {
+        height: 75%;
+        width: 100%;
+        position: center;
+        border-style:solid;
+
+      }
+	
+			.icon-bar {
+    		width: 90px;
+   			background-color: #555;
+			}
+			.icon-bar a {
+    		display: block;
+    		text-align: center;
+    		padding: 16px;
+    		transition: all 0.3s ease;
+    		color: white;
+    		font-size: 36px;
+			}
+			.icon-bar a:hover {
+    		background-color: #000;
+			}
+			.active {
+		    background-color: #4CAF50 !important;
+			}
+
+			</style>
+
+			<body>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Los Amigos Home</a>
+        </div>
+      <ul class="nav navbar-nav">
+          <li class="active"><a href="LAHome.htm">Home</a></li>
+          <li><a href="LAShop.htm">Shop</a></li>
+          <li><a href="LALocations.htm">Locations</a></li>
+          <li><a href="LAAbout.htm">About Us</a></li>
+        </ul></li></ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+        </div>
+    </nav>
+  
+    <div class="container">
+
+
+      <div id="map"></div>
+    		<script>
+      		function initMap() {
+        	var mark1 = {lat: 30.420165, lng: -97.838201};
+        	var mark2 = {lat: 30.453115, lng: -97.827066};
+        	var mark3 = {lat: 30.405606, lng: -97.851313};
+        	var map = new google.maps.Map(document.getElementById('map'), {
+          		zoom: 11,
+          		center: mark1
+        	});
+        	var marker = new google.maps.Marker({
+       			position: mark1,
+        	 	map: map
+        	});
+       		var marker = new google.maps.Marker({
+          		position: mark2,
+          		map: map
+        	});
+        	var marker = new google.maps.Marker({
+          		position: mark3,
+          		map: map
+        	});
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRH5X8CZ-kRQ8X9BOfs0dsxTSBCaeEf2M&callback=initMap">
+    </script>
+			</div>
+		</body>
+	</head>
+</html>
